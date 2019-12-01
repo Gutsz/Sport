@@ -1,3 +1,5 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
+
 /* #--- Reset styles ---# */
 html {
   -webkit-box-sizing: border-box;
@@ -350,7 +352,7 @@ font-weight: 500;
   position: relative;
   background-position: 100%;
   background-repeat: no-repeat;
-  height: 670px;
+  height: 410px;
 
 }
 
@@ -366,7 +368,6 @@ font-weight: 500;
   font-size: 18px;
   line-height: 1.5;
   max-width: 460px;
-  padding-bottom: 180px;
   z-index: 10;
   position: relative;
 }
@@ -429,6 +430,20 @@ font-weight: 500;
 }
 
 @media (max-width:768px){
+  .main-block {
+    padding: 120px 0 40px;
+    background-size: auto;
+    background-position: 65% 0%;
+  }
+
+  .main-block img {
+    margin: 27px 0 25px;
+}
+
+  .main-block p{
+    margin: 0 auto 50px;
+  }
+
   .section{
     padding: 30px 0 25px;
   }
@@ -440,13 +455,13 @@ font-weight: 500;
             flex-direction: column;
     position: absolute;
     top: calc(100% + 1px);
-    width: 100%;
-    background: rgba(0, 0, 0, 0.4);
+    width: 290px;
+    background: rgba(0, 0, 0, 0.6);
     text-align: center;
 }
 
 .navigation li{
-  border-bottom: 2px solid #000;
+  border-bottom: 3px solid #000000;
   margin-left: 0;
 }
 
@@ -460,15 +475,6 @@ font-weight: 500;
 }
   .navigation {
   padding: 6px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   position: relative;
 }
 
@@ -489,17 +495,13 @@ font-weight: 500;
     margin: 0;
   }
 
+  .section-nature-is .title-29{
+    padding-top: 20px;
+  }
+
 }
 
 @media (max-width:572px){
-  .main-block{
-    background-position: 65%;
-  }
-  
-  .priorities{
-    background-position: 70%;
-  }
-
   .col-3{
     width: 100%;
   }
@@ -521,5 +523,70 @@ font-weight: 500;
   .nav-tab li{
     width: 180px;
     padding: 10px 0;
+  }
+
+  .card-title, .tab-title{
+    margin: 0 0 26px
+  }
+
+  .priorities p{
+    margin: 0 auto 25px;
+  }
+
+  .card-inner, .content-tab {
+    padding: 20px 50px 15px;
+  }
+  
+  .section-what-exactly-do p{
+    padding-bottom: 25px;
+  }
+}
+
+@media (max-width:400px){
+  .navigation-container{
+    font-size: 12px;
+    word-wrap: break-word;
+  }
+
+  .main-block p{
+    font-size: 17px;
+  }
+
+  .title-29{
+    font-size: 24px;
+  }
+
+  .section-who-we-are p, .advantages h4{
+    font-size: 14px;
+  }
+
+  .priorities p{
+    font-size: 16px
+  }
+
+  .advantages p{
+    font-size: 12px;
+  }
+
+  .card-title, 
+  .card p, 
+  .section-what-exactly-do p, 
+  .author-block p, 
+  .author-block__name, 
+  .section-nature-is p, 
+  .buy-block p{
+    font-size: 14px;
+  }
+
+  .tab-title{
+    font-size: 21px;
+  }
+
+  .buy-block h2 {
+    font-size: 38px;
+  }
+  
+  .button{
+    font-size: 15px;
   }
 }
