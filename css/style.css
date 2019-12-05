@@ -298,14 +298,20 @@ font-weight: 500;
   display: flex;
   font-size: 16px;
   font-weight: 500;
+    justify-content: center;
 }
 
 .nav-tab li{
-  padding: 0 20px
+  padding: 0 20px;
+  cursor: pointer;
+  line-height: 1.5;
+  border-radius: 5px;
+  transition: .2s;
 }
 
-.nav-tab a:hover{
-  color: #fff;
+.nav-tab li:hover{
+    color: #fff;
+    background-color: #00c0ff;;
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
           transform: scale(1.1);
@@ -412,6 +418,139 @@ font-weight: 500;
   
 }
 
+.tabs__content {
+    display: none;
+}
+.tabs__content.active {
+    display: block;
+}
+
+.col-2{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.projects img{
+  max-width: 120px;
+}
+
+.project-date{
+  font-size: 17px;
+  margin: 0 0 12px;
+}
+
+.title-21{
+  font-size: 21px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.projects .title-21{
+  margin: 0 0 40px;
+}
+
+.projects p{
+  font-size: 17px;
+  line-height: 1.2;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.projects .col-2{
+  padding: 40px 15px;
+  margin: 0 0 140px;
+}
+.projects{
+  margin-bottom: -155px;
+  overflow: hidden;
+}
+
+.section-date{
+  display: flex;
+  justify-content: space-between;
+  width: 100%
+}
+
+.section-date .col-3{
+  padding: 96px 10px;
+}
+
+.about-block__item {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.about-block{
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.4;
+}
+
+.about-block__content{
+  width: 320px
+}
+
+.title25{
+  
+  font-size: 25px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 80px 0 25px;
+}
+
+.about-block__content p{
+  font-size: 18px;
+  padding-bottom: 15px;
+}
+
+.media-icons a {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.media-icons a:hover {
+  transform: scale(1.2);
+}
+
+.media-icons img{
+  /* max-width: 35px; */
+  filter: brightness(10);
+  margin: 0 3px 10px;
+}
+
+.about-links{
+  display: flex;
+}
+
+.about-list{
+  flex-wrap: wrap;
+  padding: 80px 55px 75px;
+}
+
+.about-list span{
+  font-size: 21px;
+  text-transform: uppercase;
+  display: block;
+  padding: 0 0 50px;
+}
+
+.about-list a:hover{
+  color: #059fd1;
+}
+
+.copyright{
+  background: #059fd1;
+  color: #000000;
+  font-size: 12px;
+  padding: 5px;
+}
+
+
+/*resposive styles*/
 @media (max-width: 1175px){
   .overlay{
     opacity: 0.4;
@@ -426,6 +565,12 @@ font-weight: 500;
 @media (max-width: 1100px) {
   .card-inner, .content-tab {
     padding: 40px 50px 60px;
+  }
+}
+
+@media (max-width: 884px){
+  .about-list{
+    padding: 80px 25px 75px;
   }
 }
 
@@ -482,7 +627,7 @@ font-weight: 500;
   background-position: 75%;
 }
 
-  .row-3{
+  .row-3, .row-2{
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
@@ -499,16 +644,45 @@ font-weight: 500;
     padding-top: 20px;
   }
 
+  .projects {
+    margin-bottom: 0;
+}
+
+  .projects .col-2 {
+    padding: 20px 15px;
+    margin: 0;
+}
+
+.section-date {
+  flex-wrap: wrap;
+}
+
+.section-date .col-3 {
+  padding: 20px 10px;
+}
+
+  .title25{
+    padding: 30px 0 25px;
+  }
+  
+  .about-list {
+    padding: 30px 25px 15px;
+}
+
+  .about-list span{
+    padding: 0 0 25px;
+  }
+
 }
 
 @media (max-width:572px){
-  .col-3{
+  .col-3, .col-2{
     width: 100%;
   }
   .nav-tab{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -540,6 +714,8 @@ font-weight: 500;
   .section-what-exactly-do p{
     padding-bottom: 25px;
   }
+
+
 }
 
 @media (max-width:400px){
@@ -548,7 +724,10 @@ font-weight: 500;
     word-wrap: break-word;
   }
 
-  .main-block p{
+  .main-block p, 
+  .about-list span,
+  .title-21,
+  .title25{
     font-size: 17px;
   }
 
@@ -574,7 +753,12 @@ font-weight: 500;
   .author-block p, 
   .author-block__name, 
   .section-nature-is p, 
-  .buy-block p{
+  .buy-block p,
+  .projects p,
+  .section-date p,
+  .author-block,
+  .about-block__content p,
+  .about-list p{
     font-size: 14px;
   }
 
@@ -589,4 +773,8 @@ font-weight: 500;
   .button{
     font-size: 15px;
   }
+
+  .about-list {
+    padding: 30px 20px 15px;
+}
 }
